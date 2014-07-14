@@ -13,6 +13,11 @@
 		A9A0C53A196C0587006EE68A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9A0C538196C0587006EE68A /* Main.storyboard */; };
 		A9A0C53C196C0587006EE68A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9A0C53B196C0587006EE68A /* Images.xcassets */; };
 		A9A0C548196C0587006EE68A /* tvdags3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A0C547196C0587006EE68A /* tvdags3Tests.swift */; };
+		A9A0C55A196C0E37006EE68A /* TVTVGuideContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A0C559196C0E37006EE68A /* TVTVGuideContainerViewController.swift */; };
+		A9A0C55D196C8469006EE68A /* TVAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A0C55C196C8469006EE68A /* TVAPIClient.swift */; };
+		A9A0C560196C9013006EE68A /* TVEPGManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A0C55F196C9013006EE68A /* TVEPGManager.swift */; };
+		A9A0C563196C9579006EE68A /* RAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A0C562196C9579006EE68A /* RAC.swift */; };
+		A9A0C566196DED86006EE68A /* TVEPGNowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A0C565196DED86006EE68A /* TVEPGNowViewModel.swift */; };
 		F8D97D44BCAB472FA3ED4B7A /* libPods-tvdags3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CACE972EDCC44FFF9EBDB899 /* libPods-tvdags3.a */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +43,11 @@
 		A9A0C546196C0587006EE68A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9A0C547196C0587006EE68A /* tvdags3Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tvdags3Tests.swift; sourceTree = "<group>"; };
 		A9A0C554196C0A0B006EE68A /* tvdags3-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tvdags3-Bridging-Header.h"; sourceTree = "<group>"; };
+		A9A0C559196C0E37006EE68A /* TVTVGuideContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVTVGuideContainerViewController.swift; sourceTree = "<group>"; };
+		A9A0C55C196C8469006EE68A /* TVAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVAPIClient.swift; sourceTree = "<group>"; };
+		A9A0C55F196C9013006EE68A /* TVEPGManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVEPGManager.swift; sourceTree = "<group>"; };
+		A9A0C562196C9579006EE68A /* RAC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAC.swift; sourceTree = "<group>"; };
+		A9A0C565196DED86006EE68A /* TVEPGNowViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVEPGNowViewModel.swift; sourceTree = "<group>"; };
 		CAA30AEF73484386B1602D6C /* Pods-tvdags3.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tvdags3.xcconfig"; path = "Pods/Pods-tvdags3.xcconfig"; sourceTree = "<group>"; };
 		CACE972EDCC44FFF9EBDB899 /* libPods-tvdags3.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tvdags3.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -64,6 +74,7 @@
 		A9A0C524196C0587006EE68A = {
 			isa = PBXGroup;
 			children = (
+				A9A0C564196C9589006EE68A /* External */,
 				A9A0C52F196C0587006EE68A /* tvdags3 */,
 				A9A0C544196C0587006EE68A /* tvdags3Tests */,
 				A9A0C52E196C0587006EE68A /* Products */,
@@ -84,6 +95,9 @@
 		A9A0C52F196C0587006EE68A /* tvdags3 */ = {
 			isa = PBXGroup;
 			children = (
+				A9A0C55B196C83E2006EE68A /* Network Extensions */,
+				A9A0C55E196C8F6C006EE68A /* Model */,
+				A9A0C557196C0D81006EE68A /* View Controllers */,
 				A9A0C532196C0587006EE68A /* AppDelegate.swift */,
 				A9A0C534196C0587006EE68A /* FirstViewController.swift */,
 				A9A0C536196C0587006EE68A /* SecondViewController.swift */,
@@ -118,6 +132,56 @@
 				A9A0C546196C0587006EE68A /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A9A0C557196C0D81006EE68A /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A9A0C558196C0D8B006EE68A /* TV Guide */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		A9A0C558196C0D8B006EE68A /* TV Guide */ = {
+			isa = PBXGroup;
+			children = (
+				A9A0C559196C0E37006EE68A /* TVTVGuideContainerViewController.swift */,
+				A9A0C565196DED86006EE68A /* TVEPGNowViewModel.swift */,
+			);
+			name = "TV Guide";
+			sourceTree = "<group>";
+		};
+		A9A0C55B196C83E2006EE68A /* Network Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A9A0C55C196C8469006EE68A /* TVAPIClient.swift */,
+			);
+			name = "Network Extensions";
+			sourceTree = "<group>";
+		};
+		A9A0C55E196C8F6C006EE68A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A9A0C55F196C9013006EE68A /* TVEPGManager.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A9A0C561196C9543006EE68A /* Reactive Swift */ = {
+			isa = PBXGroup;
+			children = (
+				A9A0C562196C9579006EE68A /* RAC.swift */,
+			);
+			name = "Reactive Swift";
+			path = tvdags3;
+			sourceTree = "<group>";
+		};
+		A9A0C564196C9589006EE68A /* External */ = {
+			isa = PBXGroup;
+			children = (
+				A9A0C561196C9543006EE68A /* Reactive Swift */,
+			);
+			name = External;
 			sourceTree = "<group>";
 		};
 		C6E4EE92752148538BD48594 /* Frameworks */ = {
@@ -262,9 +326,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9A0C566196DED86006EE68A /* TVEPGNowViewModel.swift in Sources */,
+				A9A0C560196C9013006EE68A /* TVEPGManager.swift in Sources */,
 				A9A0C537196C0587006EE68A /* SecondViewController.swift in Sources */,
+				A9A0C55A196C0E37006EE68A /* TVTVGuideContainerViewController.swift in Sources */,
 				A9A0C533196C0587006EE68A /* AppDelegate.swift in Sources */,
+				A9A0C55D196C8469006EE68A /* TVAPIClient.swift in Sources */,
 				A9A0C535196C0587006EE68A /* FirstViewController.swift in Sources */,
+				A9A0C563196C9579006EE68A /* RAC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
